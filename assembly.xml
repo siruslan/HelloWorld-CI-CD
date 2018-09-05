@@ -1,0 +1,80 @@
+<?xml version="1.0"?>
+<assembly>
+    <id>helloworld-db</id>
+
+    <formats>
+        <format>zip</format>
+    </formats>
+
+    <includeSiteDirectory>false</includeSiteDirectory>
+    <includeBaseDirectory>false</includeBaseDirectory>
+
+    <fileSets>
+        <fileSet>
+            <directory>${project.build.directory}/client-script</directory>
+            <outputDirectory>/</outputDirectory>
+            <excludes>
+                <exclude>index.html</exclude>
+                <exclude>springboot.html</exclude>
+                <exclude>optimum/**</exclude>
+            </excludes>
+        </fileSet>
+        <fileSet>
+            <directory>${project.build.directory}/client-script/optimum</directory>
+            <outputDirectory>/Content/Default Web Site/HelloWorld/optimum</outputDirectory>
+            <excludes>
+                <exclude>js/*.gz</exclude>
+                <exclude>css/*.gz</exclude>
+            </excludes>
+        </fileSet>
+
+        <fileSet>
+            <directory>${project.build.directory}/client-script/optimum</directory>
+            <outputDirectory>/public/optimum</outputDirectory>
+            <excludes>
+                <exclude>js/*.gz</exclude>
+                <exclude>css/*.gz</exclude>
+            </excludes>
+        </fileSet>
+        <fileSet>
+            <directory>${project.build.directory}/client-script/optimum</directory>
+            <outputDirectory>/static/optimum</outputDirectory>
+            <excludes>
+                <exclude>js/*.gz</exclude>
+                <exclude>css/*.gz</exclude>
+            </excludes>
+        </fileSet>
+        <fileSet>
+            <directory>src/main/client-script/WEB-INF</directory>
+            <outputDirectory>/WEB-INF</outputDirectory>
+        </fileSet>
+        <!--<fileSet>-->
+            <!--<directory>src/main/client-script/META-INF</directory>-->
+            <!--<outputDirectory>/META-INF</outputDirectory>-->
+        <!--</fileSet>-->
+    </fileSets>
+    <files>
+        <file>
+            <source>${project.build.directory}/client-script/Default.aspx</source>
+            <outputDirectory>/Content/Default Web Site/HelloWorld</outputDirectory>
+        </file>
+        <file>
+            <source>${project.build.directory}/client-script/favicon.ico</source>
+            <outputDirectory>/static</outputDirectory>
+        </file>
+        <file>
+            <source>${project.build.directory}/client-script/favicon.ico</source>
+            <outputDirectory>/Content/Default Web Site/HelloWorld</outputDirectory>
+        </file>
+        <file>
+            <source>${project.build.directory}/helloworld.jar</source>
+            <outputDirectory>/</outputDirectory>
+        </file>
+        <file>
+            <source>${project.build.directory}/client-script/favicon.ico</source>
+            <outputDirectory>/public</outputDirectory>
+        </file>
+    </files>
+
+</assembly>
+

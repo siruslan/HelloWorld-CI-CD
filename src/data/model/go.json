@@ -1,0 +1,40 @@
+{
+    "header" : "",
+    "social" : {
+        "twitter" : "https://twitter.com/intent/tweet?original_referer=http%3A%2F%2Fjelastic.com%2F&source=tweetbutton&text=I've%20just%20deployed%20my%20first%20cloud%20app%20into%20Jelastic.%20Best%20Python%20PaaS%20ever!&url=http%3A%2F%2Fjelastic.com%2F&via=jelastic",
+        "facebook" : "http://www.facebook.com/sharer.php?u=https%3A%2F%2Fjelastic.com%2F&t=I've%20just%20deployed%20my%20first%20cloud%20app%20into%20Jelastic.%20Best%20Python%20PaaS%20ever!",
+        "google-plus" : "https://plus.google.com/share?url=http%3A%2F%2Fjelastic.com%2F&h1=en-US"
+    },
+    "usefulLinks" : {
+        "left" : [
+            {
+                "text" : "Go Dev Center",
+                "href": "https://docs.jelastic.com/go-center"
+            },
+            {
+                "text" : "Deployment Guide",
+                "href": "https://docs.jelastic.com/deployment-guide"
+            },
+            {
+                "text" : "SSH Access",
+                "href": "http://docs.jelastic.com/ssh-access"
+            }
+        ],
+        "right" : [
+            {
+                "text" : "Automatic Vertical Scaling",
+                "href": "https://docs.jelastic.com/automatic-vertical-scaling"
+            },
+            {
+                "text" : "Automatic Horizontal Scaling",
+                "href": "https://docs.jelastic.com/automatic-horizontal-scaling"
+            },
+            {
+                "text" : "Pricing FAQ",
+                "href": "http://docs.jelastic.com/pricing-model"
+            }
+        ]
+    },
+    "year" : "\n{{.Year}}\n",
+    "hostname" : "\n{{.Hostname}}\n"
+}

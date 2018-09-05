@@ -1,0 +1,115 @@
+<!DOCTYPE etl SYSTEM "http://scriptella.javaforge.com/dtd/etl.dtd">
+<etl>
+    <connection id="java" driver="janino" />
+    <connection id="scriptella" driver="scriptella"/>
+
+    <query connection-id="java">
+        set("BASE_DIR",(String)get("project.build.directory"));
+        set("SUFFIX",".ejs");
+        set("SOURCE","index");
+        set("MODEL",(String)get("project.data.model.directory") + "/go.json");
+        set("PUBLIC_CONTEXT","public");
+        set("OUTPUT","index.tpl");
+        next();
+
+        <script connection-id="scriptella">handlebars-etl.xml</script>
+    </query>
+
+    <query connection-id="java">
+        set("BASE_DIR",(String)get("project.build.directory"));
+        set("SUFFIX",".ejs");
+        set("SOURCE","index");
+        set("MODEL",(String)get("project.data.model.directory") + "/jsp.json");
+        set("PUBLIC_CONTEXT","public");
+        set("OUTPUT","index.jsp");
+        next();
+
+        <script connection-id="scriptella">handlebars-etl.xml</script>
+    </query>
+
+    <query connection-id="java">
+        set("BASE_DIR",(String)get("project.build.directory"));
+        set("SUFFIX",".ejs");
+        set("SOURCE","index");
+        set("MODEL",(String)get("project.data.model.directory") + "/php.json");
+        set("PUBLIC_CONTEXT","public");
+        set("OUTPUT","index.php");
+        next();
+
+        <script connection-id="scriptella">handlebars-etl.xml</script>
+    </query>
+
+    <query connection-id="java">
+        set("BASE_DIR",(String)get("project.build.directory"));
+        set("SUFFIX",".ejs");
+        set("SOURCE","index");
+        set("MODEL",(String)get("project.data.model.directory") + "/erb.json");
+        set("PUBLIC_CONTEXT","");
+        set("OUTPUT","index.erb");
+        next();
+
+        <script connection-id="scriptella">handlebars-etl.xml</script>
+    </query>
+
+    <query connection-id="java">
+        set("BASE_DIR",(String)get("project.build.directory"));
+        set("SUFFIX",".ejs");
+        set("SOURCE","index");
+        set("MODEL",(String)get("project.data.model.directory") + "/asp.json");
+        set("PUBLIC_CONTEXT","");
+        set("OUTPUT","Default.aspx");
+        next();
+
+        <script connection-id="scriptella">handlebars-etl.xml</script>
+    </query>
+
+    <query connection-id="java">
+        set("BASE_DIR",(String)get("project.build.directory"));
+        set("SUFFIX",".ejs");
+        set("SOURCE","index");
+        set("MODEL",(String)get("project.data.model.directory") + "/py.json");
+        set("PUBLIC_CONTEXT","static");
+        set("OUTPUT","index.py");
+        next();
+
+        <script connection-id="scriptella">handlebars-etl.xml</script>
+    </query>
+
+    <query connection-id="java">
+        set("BASE_DIR",(String)get("project.build.directory"));
+        set("SUFFIX",".ejs");
+        set("SOURCE","index");
+        set("MODEL",(String)get("project.data.model.directory") + "/springboot.json");
+        set("PUBLIC_CONTEXT","");
+        set("OUTPUT","springboot.html");
+        next();
+
+        <script connection-id="scriptella">handlebars-etl.xml</script>
+    </query>
+
+
+    <query connection-id="java">
+        set("BASE_DIR",(String)get("project.build.directory"));
+        set("SUFFIX",".ejs");
+        set("SOURCE","index");
+        set("MODEL",(String)get("project.data.model.directory") + "/ejs.json");
+        set("PUBLIC_CONTEXT","");
+        set("OUTPUT","index.ejs");
+        next();
+
+        <script connection-id="scriptella">handlebars-etl.xml</script>
+    </query>
+
+    <query connection-id="java">
+        set("BASE_DIR",(String)get("project.build.directory"));
+        set("SUFFIX",".ejs");
+        set("SOURCE","index");
+        set("MODEL",(String)get("project.data.model.directory") + "/html.json");
+        set("PUBLIC_CONTEXT","");
+        set("OUTPUT","index.html");
+        next();
+
+        <script connection-id="scriptella">handlebars-etl.xml</script>
+    </query>
+
+</etl>
